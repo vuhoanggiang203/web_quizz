@@ -1,0 +1,65 @@
+body {
+    font-family: sans-serif;
+    /* Set a default font */
+    margin: 0;
+    /* Remove default margin from body */
+}
+
+form {
+    width: 300px;
+    /* Set form width */
+    margin: 50px auto;
+    /* Center the form horizontally */
+    border: 1px solid #ccc;
+    /* Add a light border */
+    padding: 20px;
+    /* Add padding for spacing */
+    border-radius: 5px;
+    /* Add rounded corners */
+}
+
+h1 {
+    text-align: center;
+    /* Center the heading text */
+}
+
+label {
+    display: block;
+    /* Make labels display on separate lines */
+    margin-bottom: 5px;
+    /* Add space between labels and inputs */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    /* Set input width to full width of form */
+    padding: 10px;
+    /* Add padding for spacing */
+    border: 1px solid #ccc;
+    /* Add a light border */
+    border-radius: 3px;
+    /* Add rounded corners */
+}
+
+button {
+    width: 100%;
+    /* Set button width to full width of form */
+    padding: 10px;
+    /* Add padding for spacing */
+    background-color: #4CAF50;
+    /* Set button background color */
+    color: white;
+    /* Set button text color */
+    border: none;
+    /* Remove default button border */
+    border-radius: 3px;
+    /* Add rounded corners */
+    cursor: pointer;
+    /* Change cursor to pointer on hover */
+}
+
+button:hover {
+    background-color: #3e8e41;
+    /* Change button color on hover */
+}
