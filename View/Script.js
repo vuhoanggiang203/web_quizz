@@ -90,10 +90,11 @@ btn_submit.addEventListener("click", (event) => {
    console.log("do dai mang ?");
     console.log(leng)
     if(cauhoihientai<leng){
-        alert('nho');}
+        load_question();
+    }
        if(cauhoihientai>leng||cauhoihientai==leng)
        document.getElementById('form_question').innerHTML = `<h3>Ban da dung ${so_caudung} / ${leng}   </h3>
-       <button onclick="location.reload()"> Lam lai bai thi </button> ` ;
+       <button onclick="location.reload()" > Lam lai bai thi </button> ` ;
 })
 
 // if(cauhoihientai<leng){

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .btn_delete {
+        padding: 10px;
+        border: 1px solid #000;
+        margin: 20px;
+      }
+      .btn_update {
+        padding: 10px;
+        border: 1px solid #000;
+        margin: 20px;
+      }
+      .btn_creat {
+        padding: 10px;
+        border: 1px solid #000;
+        margin: 20px;
+      }
+      .btn_creat:hover {
+        background-color: bisque;
+      }
+      .menu:hover {
+        background-color: bisque;
+      }
+      .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      .nav div {
+        padding: 10px 20px;
+        margin-left: 20px;
+        border: 1px solid #000;
+      }
+
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+      a {
+        color: #000;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <div class="menu"><a href="#">Quản lý câu hỏi</a></div>
+        <div class="menu"><a href="#">Quản lý tài khoản</a></div>
+        <div class="menu"><a href="#">Tài khoản</a></div>
+      </div>
+    </header>
+    <main>
+      <button class="btn_creat">Create</button>
+      <table id="table_question">
+        <tr>
+          <th>ID</th>
+          <th>Đề</th>
+          <th>Đáp Án A</th>
+          <th>Đáp án B</th>
+          <th>Đáp án C</th>
+          <th>Đáp án D</th>
+          <th>Chức năng</th>
+        </tr>
+      </table>
+    </main>
+  </body>
+  <script>
+    fetch("http://localhost/rest_api_php/controller/read.php")
+      .then((res) => res.json())
+      .then((data) => {
+        for (let i = 0; i < data.question.length; i++) {
+          //   const data.question[i] = data.question[i];
+          console.log(data.question[i]);
+
+          title_question1 = data.question[i].title;
+          dapanA = data.question[i].dapan1;
+          dapanB = data.question[i].dapan2;
+          dapanC = data.question[i].dapan3;
+          dapanD = data.question[i].dapan4;
+          caudung = data.question[i].dapan;
+          id = data.question[i].id_cauhoi;
+
+          document.getElementById("table_question").innerHTML += ` 
+       
+        <tr>
+            <th>${id}</th>
+              <th>${title_question1}</th>
+              <th>${dapanA}</th>
+              <th>${dapanB}</th>
+              <th>${dapanC}</th>
+              <th>${dapanD}</th>
+              <th>
+            <span><button class="btn_delete" href="delete_tour.php?deleteid=;>Delete</button> <button class="btn_update">Update</button></span>
+          </th>
+            </tr>
+        
+        
+        `;
+        }
+      })
+      .catch((error) => console.log(error));
+  </script>
+</html>
