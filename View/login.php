@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Lưu dữ liệu tài khoản vào session
             $_SESSION["username"] = $row["username"];
             // Chuyển hướng đến trang đăng nhập
-            header("Location: ./View/Home.php");
+            header("Location: ./View/");
             exit();
         }
     } else {
