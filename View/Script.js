@@ -3,24 +3,24 @@ const btn_submit = document.getElementById('submit');
 const cau_tra_loi = document.querySelectorAll('.cau_tra_loi')
 // funtion unselect radio button 
 function unselect1() {
-    document.getElementById("dapan2").checked =false;
-document.getElementById("dapan3").checked =false;
-document.getElementById("dapan4").checked =false;
+  document.getElementById("dapan2").checked = false;
+  document.getElementById("dapan3").checked = false;
+  document.getElementById("dapan4").checked = false;
 }
 function unselect2() {
-    document.getElementById("dapan1").checked =false;
-    document.getElementById("dapan3").checked =false;
-    document.getElementById("dapan4").checked =false;
+  document.getElementById("dapan1").checked = false;
+  document.getElementById("dapan3").checked = false;
+  document.getElementById("dapan4").checked = false;
 }
 function unselect3() {
-    document.getElementById("dapan2").checked =false;
-    document.getElementById("dapan1").checked =false;
-    document.getElementById("dapan4").checked =false;
+  document.getElementById("dapan2").checked = false;
+  document.getElementById("dapan1").checked = false;
+  document.getElementById("dapan4").checked = false;
 }
 function unselect4() {
-    document.getElementById("dapan2").checked =false;
-    document.getElementById("dapan3").checked =false;
-    document.getElementById("dapan1").checked =false;
+  document.getElementById("dapan2").checked = false;
+  document.getElementById("dapan3").checked = false;
+  document.getElementById("dapan1").checked = false;
 }
 // let cauhoihientai = 0 ;
 let diem = 0 ;
