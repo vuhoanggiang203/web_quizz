@@ -13,13 +13,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $role = $row["role"];
         if ($role == 0) {
             // Chuyển hướng đến trang admin
-            header("Location: ./View/admin.php");
+            header("Location: ./View/admin.html");
             exit();
         } else if ($role == 1) {
             // Lưu dữ liệu tài khoản vào session
             $_SESSION["username"] = $row["username"];
             // Chuyển hướng đến trang đăng nhập
-            header("Location: ./View/Home.php");
+            header("Location: ./View/Home.html");
             exit();
         }
     } else {

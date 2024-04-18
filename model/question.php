@@ -41,7 +41,7 @@ class Question_model
     }
     public function creat_question()
     {
-        $query =  "UPDATE question set title=:title, dapan1=:dapan1 , dapan2=:dapan2, dapan3=:dapan3,dapan4=:dapan4,dapan=:dapan  ";
+        $query =  "INSERT into question set title=:title, dapan1=:dapan1 , dapan2=:dapan2, dapan3=:dapan3,dapan4=:dapan4,dapan=:dapan";
         $stmt = $this->conn->prepare($query);
         $this->title = htmlspecialchars(strip_tags($this->title));
         $this->dapan1 = htmlspecialchars(strip_tags($this->dapan1));
