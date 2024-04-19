@@ -35,7 +35,7 @@
       
       var user = document.getElementById("username").value;
       var pass = document.getElementById("password").value;
-      fetch("http://localhost/rest_api_php/controller/show_api_account.php")
+      fetch("http://localhost/projects/mvc-pttk/web_quizz/controller/show_api_account.php")
         .then((res) => res.json())
         .then((data) => {
           let leng = data.account.length ;
@@ -51,7 +51,7 @@
                 window.location.href = "./Home.html";
               } else if (role == 0) {
                 console.log("admin");
-                window.location.href = "./admin.html";
+                window.location.href = "./admin.php";
               }
             }
             if (user!==user_api || pass!==pass_api) {

@@ -1,6 +1,6 @@
 load_acc();
 function load_acc() {
-  fetch("http://localhost/rest_api_php/controller/show_api_account.php")
+  fetch("http://localhost/projects/mvc-pttk/web_quizz/controller/show_api_account.php")
     .then((res) => res.json())
     .then((data) => {
       for (let i = 0; i < data.account.length; i++) {
@@ -62,7 +62,7 @@ function deletee(id) {
   };
 
   fetch(
-    "http://localhost/rest_api_php/controller/delete_acc.php",
+    "http://localhost/projects/mvc-pttk/web_quizz/controller/delete_acc.php",
     requestOptions
   )
     .then((response) => response.text())
@@ -76,7 +76,7 @@ var username_input = document.getElementById("username").value;
 var pass_input = document.getElementById("pass").value;
 var sdt_input = document.getElementById("sdt").value;
 var role_input = document.getElementById("role").value;
-var url_api = "http://localhost/rest_api_php/controller/show_api_account.php";
+var url_api = "http://localhost/projects/mvc-pttk/web_quizz/controller/show_api_account.php";
 // FUNCTION CREATE DATA ACCOUNT
 // function creat(data,callback) {
 //     var options = {
@@ -114,7 +114,7 @@ document.getElementById("btn_update_acc").addEventListener("click", () => {
   };
 
   fetch(
-    "http://localhost/rest_api_php/controller/update_acc.php",
+    "http://localhost/projects/mvc-pttk/web_quizz/controller/update_acc.php",
     requestOptions
   )
     .then((response) => response.text())
@@ -155,7 +155,7 @@ document.getElementById("btn_update_acc").addEventListener("click", () => {
 //FUNTION READ DATA HAVA CONDITIONER !!
 function read_one(id) {
   // console.log("http://localhost/rest_api_php/controller/show_one_acc.php?id="+id);
-  fetch("http://localhost/rest_api_php/controller/show_one_acc.php?id=" + id)
+  fetch("http://localhost/projects/web_quizz/controller/show_one_acc.php?id=" + id)
     .then((res) => res.json())
     .then((data) => {
       var id1 = data.id_user;
@@ -208,12 +208,12 @@ document.getElementById("btn_creat_acc").addEventListener("click", (event) => {
   };
 
   fetch(
-    "http://localhost/rest_api_php/controller/create_acc.php",
+    "http://localhost/projects/web_quizz/controller/create_acc.php",
     requestOptions
   )
     .then((response) => response.text())
     .then((result) => console.log(result))
     .catch((error) => console.error(error));
-  alert("Them thanh cong !");
+  alert("Thêm thành công !");
   window.location.reload();
 });

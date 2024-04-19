@@ -30,7 +30,7 @@ var caudung = "";
 var leng = 0 ; 
 function load_question() {
     remove_answer();
-    fetch("http://localhost/rest_api_php/controller/read.php")
+    fetch("http://localhost/projects/mvc-pttk/web_quizz/controller/read.php")
     .then(res => res.json())
     .then(data => {
         const title_question1 = document.getElementById('title_question');
@@ -60,6 +60,7 @@ function get_answer() {
     cau_tra_loi.forEach(cau_tra_loi => {
         if(cau_tra_loi.checked){
             answer = cau_tra_loi.id;
+            console.log(answer)
         }
     })
     return answer ;
@@ -93,8 +94,8 @@ btn_submit.addEventListener("click", (event) => {
         load_question();
     }
        if(cauhoihientai>leng||cauhoihientai==leng)
-       document.getElementById('form_question').innerHTML = `<h3>Ban da dung ${so_caudung} / ${leng}   </h3>
-       <button onclick="location.reload()" > Lam lai bai thi </button> ` ;
+       document.getElementById('form_question').innerHTML = `<h3 class="h3 mt-3">Bạn đã đúng ${so_caudung} / ${leng}   </h3>
+       <button onclick="location.reload()" class="btn btn-dark mt-3"> Làm lại bài thi </button> ` ;
 })
 
 // if(cauhoihientai<leng){

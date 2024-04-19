@@ -111,6 +111,9 @@ function postData(url = "", data = {}) {
     return response.json(); // parses JSON response into native JavaScript objects
 }
 
+
+
+
 function reset() {
   document.getElementById("createDapan1").checked = false;
   document.getElementById("createDapan2").checked = false;
